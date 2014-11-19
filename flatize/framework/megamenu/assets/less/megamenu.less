@@ -1,0 +1,378 @@
+@import "mixin.less";
+body{
+    color: #555;
+    line-height: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  font-weight: bold;
+}
+li, dd{
+  margin: 0;
+
+}
+.btn,.modal-content{
+  .border-radius(0);
+}
+
+.header{
+  background: #333;
+  padding: 10px 20px;
+  h1{
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: normal;
+  }
+}
+
+#toolbar{
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  padding:10px 20px;
+  background: #e6e6e6;
+  position: relative;
+}
+
+#pgl-mainnav{
+  padding:0 20px;
+  .dropdown-menu{
+    border: 1px solid #aaa;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 0;
+    min-width: 200px;
+    background: #f2f2f2;
+    box-shadow: 3px 3px 0 #e6e6e6;
+    z-index: 99;
+  }
+  .nav{
+    >li{
+      margin-right: 20px;
+      &.open{
+        >a{
+          background: #07b;
+          border-color: #07b;
+          color: #fff;
+        }
+      }
+      >a{
+        color: #777;
+        border: 1px solid #ccc;
+        padding: 7px 10px;
+        background: #f2f2f2;
+        font-weight: bold;
+        border-radius: 0;
+        display: block;
+        &:hover,
+        &.active{
+          background: #fff;
+          color:#000;
+        }
+      }
+      >.dropdown-menu{
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.admin-inline-toolbox{
+  height: 128px;
+  border-bottom: 1px solid #e6e6e6;
+  margin: 0 0 20px;
+  padding: 0 20px;
+  background: #f2f2f2;
+  h3{
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .list-inline{
+    li{
+      margin-right: 20px;
+    }
+  }
+  .menu_submenu{
+    width: 115px;
+  }
+  #menu-form{
+    position: static!important;
+  }
+}
+
+#wpbody-content{
+  select{
+    min-width: 150px;
+  }
+}
+
+#manage-widget{
+  margin: 0 20px;
+}
+
+#myModal{
+  background: rgba(0,0,0,0.5);
+}
+
+#wpbody-content .updated{
+  display: none;
+}
+
+.attachment .thumbnail{
+  border:0;
+  padding:0;
+  border-radius:0;
+}
+
+.megamenu-pages .popover-content {
+  padding: 5px 0px
+}
+#adminmenuwrap,#adminmenuback, #wpfooter,#wpadminbar, .update-nag, #setting-error-tgmpa{
+	display: none;
+}
+
+#wpcontent, #wpfooter, html.wp-toolbar{
+	margin:0;
+  padding-top: 0;
+  padding-left: 0;
+}
+
+
+.megamenu-pages{
+   margin-bottom: 100px
+}
+
+.megamenu-pages .tab-content{
+    overflow: inherit;
+    height:100%;
+}
+
+
+.button-alignments button{
+   font-size: 11px;
+   padding: 3px 5px;
+}
+
+.widget-form .arrow{
+  left: 50%
+}
+
+.widget-product-list img{
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-right: 12px;
+}
+
+.widget-banner .w-banner{
+ margin: 6px 10px;
+	float: left;
+}
+
+
+.form-setting{
+  display: none;
+}
+
+.pgl-widget{
+  position: relative;
+    padding: 3px 2px;
+    margin: 1px 0;
+    border: solid 1px #FCF2F2;
+}
+.pgl-widget:hover{
+  border-color:#4CAE4C;
+}
+.pgl-widget .w-setting{
+  background: url(../images/delete.png) no-repeat center center;
+  width: 23px;
+  height: 23px;
+  z-index: 10000;
+  position: absolute;
+  top: 0px;
+  right:0px;
+  display: none;
+  cursor: hand;
+  cursor:pointer;
+}
+
+.pgl-widget span{
+  display: block;
+  font-size: 10px;
+  color: #666
+}
+.pgl-widget .btn  {
+  font-size: 11px;
+  width: 100%;
+  overflow: hidden;
+}
+.pgl-widget:hover .w-setting{
+  display: block;
+}
+
+.disable-menu .dropdown-menu, .disable-menu .caret{
+  display: none!important;
+}
+
+
+
+.aligned-center .dropdown-menu{
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  -o-transform: translate(-50%);
+}
+
+
+
+.aligned-right .dropdown-menu{
+    left: auto;
+    right: 0;
+}
+.aligned-left .dropdown-menu{
+
+}
+
+.megamenu .aligned-fullwidth {
+  position: inherit;
+}
+
+.aligned-fullwidth .dropdown-menu{
+  width: 100%!important;
+  left: 0;
+}
+
+
+/****/
+.megamenu{
+  .menu-desc{
+    display: none;
+  }
+  li.mega-group > a .caret{
+    display:none;
+  }
+  ul{
+    margin:0;
+    padding:0
+    li{
+      list-style:none;
+    }
+  }
+  .pgl-col > div{
+    background: #F8F8F8;
+    border: #CCCCCC solid 1px;
+    padding: 6px;
+  }
+  .cols1{
+    min-width:200px;
+  }
+  .cols2{
+    min-width:500px;
+  }
+  .cols3{
+    min-width:740px;
+  }
+  .pgl-col.active > div,
+  .pgl-col:hover > div{
+    border: solid 1px #DFB5B4; background: #FCF2F2
+  }
+  .mega-group  > a .menu-title {
+    font-size: 110%;
+    font-weight: bold;
+  }
+}
+
+.dropdown-submenu > .dropdown-menu {
+    border-radius: 0 6px 6px 6px;
+    left: 100%;
+    margin-left: -1px;
+    margin-top: -6px;
+    top: 0;
+}
+li.dropdown-submenu {
+  position:relative;
+}
+
+.dropdown-submenu > a:after {
+    margin-right: -10px;
+    margin-top: -22px;
+}
+
+
+.dropdown-menu-inner{
+  .row{
+    margin: 2px 3px;
+    min-height: 40px;
+    padding: 5px 0;
+    border: 1px dotted #ccc;
+    &.active,&:hover{
+      border: #07b solid 1px;
+      background: #fff;
+    }
+  }
+}
+
+
+/*Shortcode*/
+
+
+.shortcode-title{
+  margin-top:0;
+}
+
+.shortcode-title span{
+  display: inline;
+}
+
+.btn.item .item-content{
+  position: relative;
+}
+
+.btn.item .item-content .overlay{
+  opacity: 0.5;
+  position: absolute;
+  top:0;
+  left: 0;
+  background: #fff;
+  z-index: 120;
+  width: 100%;
+  height: 100%;
+}
+
+#pgl-post #embed_post{
+  width: 50%;
+}
+
+#pgl-post .result,.pgl-embed .result{
+  text-align: center;
+  width: 510px;
+  margin:0 auto;
+  position: relative;
+}
+#pgl-post .result.active,.pgl-embed .result.active{
+  padding:5px 0;
+  border:1px solid #DFDFDF;
+  border-radius:3px;
+  background: #FAFAFA;
+}
+.pgl-embed .pgl_embed_view{
+  margin-top:20px;
+}
+#pgl-post .result a.remove-embed,.pgl-embed a.remove-embed{
+  background: url(../images/icon/ico-delete.png) no-repeat;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  cursor: pointer;
+}
+
+#pgl-post .spinner,.pgl-embed .spinner{
+  margin:0 auto;
+}

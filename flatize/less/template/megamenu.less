@@ -1,0 +1,30 @@
+/* Mega menu effect  */
+.pgl-megamenu{
+	&.bottom-to-top{
+		.megamenu {
+			.dropdown-menu{
+				display: block;
+				margin: 20px 0 0 0;
+				opacity: 0;
+				visibility: hidden;
+				position: absolute;
+				left: 0;
+				z-index: 1;
+				.dropdown-menu{
+					top: 0;
+					left: 160px;
+					margin: 0 0 0 20px;		
+				} 
+			}
+			li{
+				&.open{
+					>.dropdown-menu{
+						opacity: 1;
+						visibility: visible;
+						margin: 0;
+					}
+				}
+			}
+		}
+	}
+}
